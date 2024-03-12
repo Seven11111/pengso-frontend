@@ -11,6 +11,10 @@
   max-width: 1024px;
 }
 
+strong {
+  color: #c00;
+}
+
 nav {
   padding: 30px;
 }

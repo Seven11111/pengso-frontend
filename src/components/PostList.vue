@@ -2,9 +2,13 @@
   <a-list item-layout="horizontal" :data-source="props.postList">
     <template #renderItem="{ item }">
       <a-list-item>
-        <a-list-item-meta :description="item.content">
+        <!--        :description="item.content"-->
+        <a-list-item-meta>
+          <template #description>
+            <p v-html="item.content"></p>
+          </template>
           <template #title>
-            <a href="https://www.antdv.com/">{{ item.title }}</a>
+            <a href="https://www.antdv.com/" v-html="item.title"></a>
           </template>
           <template #avatar>
             <a-avatar :src="gege" />
